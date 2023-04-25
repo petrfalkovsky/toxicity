@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
-import 'dart:math';
 
 class FrameMainScreen extends CustomPainter {
   @override
@@ -32,7 +31,9 @@ class FrameMainScreen extends CustomPainter {
     path_0.cubicTo(32.3815, 112.416, 25.6584, 121.646, 0.584566, 139.814);
     path_0.cubicTo(-24.4893, 157.982, -84.8149, 220.448, -128.156, 246.162);
     path_0.close();
-    path_0 = path_0.shift(const Offset(10, 592));
+
+    // control the horizontal and vertical position of the purple frame
+    path_0 = path_0.shift(const Offset(10, 527));
 
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
     paint0Fill.color = AppConfig.purpleColor.withOpacity(1.0);
