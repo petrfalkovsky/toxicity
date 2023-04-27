@@ -69,12 +69,27 @@ class _SelectScreenState extends State<SelectScreen> {
                 const SizedBox(
                   height: 63,
                 ),
-                PrimaryButton(
-                  text: 'Run the test',
-                  onTap: () {},
-                  startColor: AppConfig.yellowColor,
-                  endColor: AppConfig.yellowColor,
-                ),
+                SingleChildScrollView(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      PrimaryButton(
+                        text: 'Camera',
+                        onTap: () {},
+                        startColor: AppConfig.yellowColor,
+                        endColor: AppConfig.yellowColor,
+                        width: MediaQuery.of(context).size.width * 0.43,
+                      ),
+                      PrimaryButton(
+                        text: 'Gallery',
+                        onTap: () {},
+                        startColor: AppConfig.yellowColor,
+                        endColor: AppConfig.yellowColor,
+                        width: MediaQuery.of(context).size.width * 0.43,
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
             Column(

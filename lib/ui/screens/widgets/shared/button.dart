@@ -8,6 +8,7 @@ class PrimaryButton extends StatefulWidget {
   final Color startColor;
   final Color endColor;
   final RichText? richText;
+  final double? width;
 
   const PrimaryButton({
     Key? key,
@@ -16,6 +17,7 @@ class PrimaryButton extends StatefulWidget {
     required this.startColor,
     required this.endColor,
     this.richText,
+    this.width,
   }) : super(key: key);
 
   @override
@@ -25,7 +27,7 @@ class PrimaryButton extends StatefulWidget {
 class PrimaryButtonState extends State<PrimaryButton> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    double width = widget.width ?? MediaQuery.of(context).size.width;
 
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
