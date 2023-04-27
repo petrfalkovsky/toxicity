@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
+import 'package:toxicity/ui/screens/select.dart';
 import 'package:toxicity/ui/screens/widgets/shared/button.dart';
 import 'widgets/frame_background.dart';
 
@@ -20,17 +21,22 @@ class _GeneralState extends State<General> {
             const EdgeInsets.only(top: 65, bottom: 48, left: 24, right: 24),
         child: Stack(
           children: [
-            Expanded(
-                child: SingleChildScrollView(
+            SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SizedBox(
-                    child: CustomPaint(painter: FrameMainScreen()),
-                  )
+                  CustomPaint(
+                    painter: FrameMainScreen(
+                      rotationAngle: 0,
+                      position: Offset(
+                        MediaQuery.of(context).size.width * 0.18,
+                        MediaQuery.of(context).size.height * 0.45,
+                      ),
+                    ),
+                  ),
                 ],
               ),
-            )),
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -73,7 +79,13 @@ class _GeneralState extends State<General> {
                 ),
                 PrimaryButton(
                   text: 'Run the test',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SelectScreen()),
+                    );
+                  },
                   startColor: AppConfig.yellowColor,
                   endColor: AppConfig.yellowColor,
                 ),

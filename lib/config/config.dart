@@ -16,9 +16,6 @@ class AppConfig {
   static const Color blackColor = Color(0xff100815);
   static const Color whiteColor = Color(0xffFFFFFF);
 
-  static const Color pinkColor = Color(0xFFF59CEC);
-  static const Color blueColor = Color(0xFF3DBDFF);
-
   // Текст Условия и политика
   static const Color privacyText = Color(0xFFBEC3D2);
 

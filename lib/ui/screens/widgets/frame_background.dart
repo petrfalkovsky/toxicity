@@ -1,39 +1,45 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
 
 class FrameMainScreen extends CustomPainter {
+  final double rotationAngle;
+  final Offset position;
+
+  FrameMainScreen({required this.rotationAngle, required this.position});
+
   @override
   void paint(Canvas canvas, Size size) {
-    // canvas.rotate(48.57 * pi / 180);
-
     Path path_0 = Path();
-    path_0.moveTo(-128.156, 246.162);
-    path_0.cubicTo(-162.829, 266.733, -166.611, 240.742, -164.167, 225.175);
-    path_0.cubicTo(-201.814, 232.234, -278.665, 247.461, -284.892, 251.901);
-    path_0.cubicTo(-291.119, 256.341, 63.9351, 529.761, 242.241, 665.916);
-    path_0.lineTo(678.004, 258.309);
-    path_0.lineTo(479.464, 41.7373);
-    path_0.cubicTo(478.562, 42.5328, 474.302, 45.1051, 464.472, 49.0305);
-    path_0.cubicTo(452.184, 53.9373, 429.904, 62.386, 435.589, 23.7325);
-    path_0.cubicTo(440.137, -7.19026, 423.138, -1.11522, 414.069, 5.78765);
-    path_0.cubicTo(396.538, 14.0025, 358.789, 31.352, 348.042, 35.0313);
-    path_0.cubicTo(334.609, 39.6303, 328.554, 33.7605, 322.585, 24.518);
-    path_0.cubicTo(316.616, 15.2755, 308.595, 11.1413, 296.472, 15.2433);
-    path_0.cubicTo(286.774, 18.525, 275.444, 26.7637, 270.991, 30.4729);
-    path_0.cubicTo(257.88, 41.3834, 228.527, 64.1186, 216.011, 67.7757);
-    path_0.cubicTo(200.367, 72.3471, 199.06, 68.8837, 194.976, 57.3178);
-    path_0.cubicTo(190.893, 45.752, 178.527, 46.1106, 168.201, 55.2224);
-    path_0.cubicTo(159.941, 62.5119, 137.385, 85.0536, 127.14, 95.4132);
-    path_0.cubicTo(108.838, 110.024, 67.6807, 141.417, 49.4612, 150.107);
-    path_0.cubicTo(31.2417, 158.798, 30.6315, 145.618, 32.6038, 137.941);
-    path_0.cubicTo(36.8967, 129.756, 44.9094, 113.233, 42.6172, 112.617);
-    path_0.cubicTo(32.3815, 112.416, 25.6584, 121.646, 0.584566, 139.814);
-    path_0.cubicTo(-24.4893, 157.982, -84.8149, 220.448, -128.156, 246.162);
+    path_0.moveTo(-216.78, 306.71);
+    path_0.cubicTo(-251.494, 327.318, -255.909, 301.197, -252.804, 285.735);
+    path_0.cubicTo(-239.5, 219.499, -352.001, 334.999, -457, 348.999);
+    path_0.cubicTo(-1367.44, 470.395, -448.5, 942.498, -2.99943, 838.998);
+    path_0.lineTo(867.499, 798.499);
+    path_0.lineTo(894, 450.499);
+    path_0.cubicTo(966.5, -290, 386.289, 105.115, 376.448, 109.049);
+    path_0.cubicTo(364.148, 113.968, 341.844, 122.437, 347.561, 83.756);
+    path_0.cubicTo(352.134, 52.8112, 335.117, 58.9016, 326.037, 65.815);
+    path_0.cubicTo(308.486, 74.0469, 270.695, 91.433, 259.938, 95.1219);
+    path_0.cubicTo(246.49, 99.7331, 240.435, 93.864, 234.468, 84.62);
+    path_0.cubicTo(228.5, 75.376, 220.476, 71.2445, 208.341, 75.3574);
+    path_0.cubicTo(198.633, 78.6478, 187.288, 86.8992, 182.83, 90.6137);
+    path_0.cubicTo(169.7, 101.54, 140.309, 124.31, 127.781, 127.977);
+    path_0.cubicTo(112.121, 132.562, 110.815, 129.098, 106.737, 117.528);
+    path_0.cubicTo(102.658, 105.958, 90.2822, 106.325, 79.9419, 115.449);
+    path_0.cubicTo(71.6695, 122.749, 49.0804, 145.32, 38.8199, 155.693);
+    path_0.cubicTo(20.4942, 170.325, -20.7171, 201.766, -38.9568, 210.474);
+    path_0.cubicTo(-57.1966, 219.183, -57.7982, 205.995, -55.819, 198.313);
+    path_0.cubicTo(-51.5171, 190.12, -43.4866, 173.58, -45.7803, 172.966);
+    path_0.cubicTo(-56.0238, 172.771, -62.7585, 182.012, -87.8646, 200.209);
+    path_0.cubicTo(-112.971, 218.405, -173.387, 280.951, -216.78, 306.71);
     path_0.close();
 
     // control the horizontal and vertical position of the purple frame
-    path_0 = path_0.shift(const Offset(10, 527));
+    canvas.translate(position.dx, position.dy);
+    canvas.rotate(rotationAngle * pi / 180);
 
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
     paint0Fill.color = AppConfig.purpleColor.withOpacity(1.0);
