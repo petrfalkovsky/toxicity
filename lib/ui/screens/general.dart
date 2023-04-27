@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
 import 'package:toxicity/ui/screens/select.dart';
 import 'package:toxicity/ui/screens/widgets/shared/button.dart';
+import 'package:toxicity/ui/screens/widgets/shared/modal_bottom_sheet.dart';
 import 'widgets/frame_background.dart';
 
 class General extends StatefulWidget {
@@ -110,9 +111,9 @@ class _GeneralState extends State<General> {
                           color: AppConfig.purpleColor,
                         ),
                         onPressed: () {
-                          debugPrint('Button pressed');
+                          showModalMethod(context);
                         },
-                        iconSize: 45, // устанавливаем размер иконки
+                        iconSize: 45,
                         padding: EdgeInsets
                             .zero, // убираем все внутренние отступы у IconButton
                         splashRadius: 80, // убираем радиус splash-эффекта
