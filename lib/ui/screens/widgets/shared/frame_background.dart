@@ -7,12 +7,18 @@ import 'package:toxicity/config/config.dart';
 class FrameMainScreen extends CustomPainter {
   final double rotationAngle;
   final Offset position;
+  final double? height;
 
-  FrameMainScreen({required this.rotationAngle, required this.position});
+  FrameMainScreen({
+    required this.rotationAngle,
+    required this.position,
+    this.height,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
     Path path_0 = Path();
+
     path_0.moveTo(-216.78, 306.71);
     path_0.cubicTo(-251.494, 327.318, -255.909, 301.197, -252.804, 285.735);
     path_0.cubicTo(-239.5, 219.499, -352.001, 334.999, -457, 348.999);
@@ -37,12 +43,13 @@ class FrameMainScreen extends CustomPainter {
     path_0.cubicTo(-112.971, 218.405, -173.387, 280.951, -216.78, 306.71);
     path_0.close();
 
-    // control the horizontal and vertical position of the purple frame
     canvas.translate(position.dx, position.dy);
     canvas.rotate(rotationAngle * pi / 180);
+    canvas.scale(1, height);
 
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
     paint0Fill.color = AppConfig.purpleColor.withOpacity(1.0);
+
     canvas.drawPath(path_0, paint0Fill);
   }
 
