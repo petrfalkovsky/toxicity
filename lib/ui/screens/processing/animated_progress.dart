@@ -11,7 +11,7 @@ class RotatingProgressBar extends StatefulWidget {
   const RotatingProgressBar({
     super.key,
     this.size = 50,
-    this.color = AppConfig.purpleColor,
+    this.color = AppColors.purple,
   });
 
   @override

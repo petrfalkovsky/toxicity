@@ -21,7 +21,7 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.yellowColor,
+      backgroundColor: AppColors.yellow,
       body: Stack(
         children: [
           Padding(
@@ -43,21 +43,21 @@ class _ResultScreenState extends State<ResultScreen> {
                                   'check out my website https://example.com',
                                   subject: 'Look what I made!');
                             },
-                            startColor: AppConfig.purpleColor,
-                            endColor: AppConfig.purpleColor,
+                            startColor: AppColors.purple,
+                            endColor: AppColors.purple,
                             width: MediaQuery.of(context).size.width,
-                            borderColor: AppConfig.purpleColor,
-                            textColor: AppConfig.whiteColor,
+                            borderColor: AppColors.purple,
+                            textColor: AppColors.white,
                           ),
                         ),
                         const SizedBox(width: 10),
                         PrimaryButton(
                           onTap: () {},
-                          startColor: AppConfig.yellowColor,
-                          endColor: AppConfig.yellowColor,
+                          startColor: AppColors.yellow,
+                          endColor: AppColors.yellow,
                           width: 55,
-                          borderColor: AppConfig.purpleColor,
-                          textColor: AppConfig.purpleColor,
+                          borderColor: AppColors.purple,
+                          textColor: AppColors.purple,
                           iconAssetPath: 'assets/images/download.png',
                         )
                       ],
@@ -85,7 +85,7 @@ class _ResultScreenState extends State<ResultScreen> {
                               text: "Here is your result",
                               style: TextStyle(
                                 fontSize: 33,
-                                color: AppConfig.blackColor,
+                                color: AppColors.black,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",
@@ -97,7 +97,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     ),
                     const SizedBox(height: 50),
                     Container(
-                      color: AppConfig.blackColor,
+                      color: AppColors.black,
                       height: 30,
                       width: 30,
                     )
@@ -122,11 +122,11 @@ class LaunchAgainButton extends StatelessWidget {
     return PrimaryButton(
       text: 'Launch again',
       onTap: () {},
-      startColor: AppConfig.yellowColor,
-      endColor: AppConfig.yellowColor,
+      startColor: AppColors.yellow,
+      endColor: AppColors.yellow,
       width: MediaQuery.of(context).size.width,
-      borderColor: AppConfig.purpleColor,
-      textColor: AppConfig.purpleColor,
+      borderColor: AppColors.purple,
+      textColor: AppColors.purple,
     );
   }
 }
@@ -148,7 +148,7 @@ class GetMoreRunsButton extends StatelessWidget {
             text: "get more runs",
             style: TextStyle(
               fontSize: 20,
-              color: AppConfig.purpleColor,
+              color: AppColors.purple,
               fontWeight: FontWeight.w600,
               letterSpacing: -0.02,
               fontFamily: "Inter",
@@ -176,7 +176,7 @@ class PlainTextTestRunsLeft extends StatelessWidget {
           text: "Test runs left:  ",
           style: TextStyle(
             fontSize: 20,
-            color: AppConfig.blackColor.withOpacity(0.5),
+            color: AppColors.black.withOpacity(0.5),
             fontWeight: FontWeight.w400,
             letterSpacing: -0.02,
             fontFamily: "Inter",
@@ -186,7 +186,7 @@ class PlainTextTestRunsLeft extends StatelessWidget {
           text: "4",
           style: TextStyle(
             fontSize: 20,
-            color: AppConfig.purpleColor,
+            color: AppColors.purple,
             fontWeight: FontWeight.w600,
             letterSpacing: -0.02,
             fontFamily: "Inter",

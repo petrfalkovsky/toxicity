@@ -3,7 +3,7 @@ import 'package:toxicity/config/config.dart';
 
 Future<dynamic> showModalAbout(BuildContext context) {
   return showModalBottomSheet(
-    backgroundColor: AppConfig.yellowColor,
+    backgroundColor: AppColors.yellow,
     context: context,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
@@ -46,7 +46,7 @@ class PlainText extends StatelessWidget {
                 "Tap the close button at top-right, or simply swipe down to dismiss the sheet modal. \n\nIf you are using a partial modal, you can swipe up or down to expand or collapse the sheet modal.",
             style: TextStyle(
               fontSize: 16,
-              color: AppConfig.blackColor,
+              color: AppColors.black,
               fontWeight: FontWeight.w400,
               height: 1.25,
               fontFamily: "Inter",
@@ -77,7 +77,7 @@ class IconClosePop extends StatelessWidget {
         child: IconButton(
           icon: Image.asset(
             'assets/images/close.png',
-            color: AppConfig.purpleColor,
+            color: AppColors.purple,
             width: 30,
             height: 30,
           ),
@@ -107,7 +107,7 @@ class Head extends StatelessWidget {
             'About App',
             style: TextStyle(
               fontSize: 33,
-              color: AppConfig.blackColor,
+              color: AppColors.black,
               fontWeight: FontWeight.w400,
               height: 1.25,
               fontFamily: "Inter",

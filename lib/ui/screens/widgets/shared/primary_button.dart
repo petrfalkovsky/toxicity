@@ -1,5 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:toxicity/config/config.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:toxicity/config/config.dart'; // Импортируйте пакет для работы с SVG
 
 class PrimaryButton extends StatefulWidget {
   final String? text;
@@ -11,10 +14,13 @@ class PrimaryButton extends StatefulWidget {
   final double? height;
   final Color? borderColor;
   final Color? textColor;
-  // icons if you use standart icons from flutter lib
   final IconData? icon;
-  // icon or any image if you wanna use asset from project
   final String? iconAssetPath;
+  final String? svgIconPath;
+  final double? svgIconWidth;
+  final double? svgIconHeight;
+  final double? assetIconWidth;
+  final double? assetIconHeight;
 
   const PrimaryButton({
     Key? key,
@@ -29,6 +35,11 @@ class PrimaryButton extends StatefulWidget {
     this.textColor,
     this.icon,
     this.iconAssetPath,
+    this.svgIconPath,
+    this.svgIconWidth,
+    this.svgIconHeight,
+    this.assetIconWidth,
+    this.assetIconHeight,
   }) : super(key: key);
 
   @override
@@ -42,40 +53,55 @@ class PrimaryButtonState extends State<PrimaryButton> {
     double height = widget.height ?? 55;
 
     return GestureDetector(
-        behavior: HitTestBehavior.translucent,
-        onTap: widget.onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(21),
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [
-                widget.startColor,
-                widget.endColor,
-              ],
-            ),
-            border: Border.all(
-              color: widget.borderColor ?? Colors.transparent,
-              width: 2,
-            ),
+      behavior: HitTestBehavior.translucent,
+      onTap: widget.onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(21),
+          gradient: LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            colors: [
+              widget.startColor,
+              widget.endColor,
+            ],
           ),
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: widget.richText ??
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    widget.iconAssetPath != null
-                        ? Image.asset(widget.iconAssetPath!)
-                        : Container(),
-                    if (widget.icon != null)
+          border: Border.all(
+            color: widget.borderColor ?? Colors.transparent,
+            width: 2,
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: widget.richText ??
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (widget.svgIconPath != null)
+                      SvgPicture.asset(
+                        widget.svgIconPath!,
+                        width: widget.svgIconWidth,
+                        height: widget.svgIconHeight,
+                        color: widget.textColor ?? defaultTextColor,
+                      ),
+                    if (widget.iconAssetPath != null)
+                      Image.asset(
+                        widget.iconAssetPath!,
+                        width: widget.assetIconWidth,
+                        height: widget.assetIconHeight,
+                        // color: widget.textColor ?? defaultTextColor,
+                      )
+                    else if (widget.icon != null)
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(widget.icon,
-                            color: widget.textColor ?? defaultTextColor),
+                        icon: Icon(
+                          widget.icon,
+                          color: widget.textColor ?? defaultTextColor,
+                        ),
                       ),
                     Text(
                       widget.text?.toUpperCase() ?? '',
@@ -85,11 +111,13 @@ class PrimaryButtonState extends State<PrimaryButton> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ]),
-            ),
+                  ],
+                ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 
-const Color defaultTextColor = AppConfig.blackColor;
+const Color defaultTextColor = AppColors.black;

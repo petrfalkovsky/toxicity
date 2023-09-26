@@ -16,7 +16,7 @@ class _GetRunsScreenState extends State<GetRunsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.purpleColor,
+      backgroundColor: AppColors.purple,
       body: Padding(
         padding: EdgeInsets.only(
             top: 65,
@@ -77,10 +77,10 @@ class HundredRunsContainer extends StatelessWidget {
       child: Container(
         height: 77,
         decoration: BoxDecoration(
-          color: AppConfig.whiteColor.withOpacity(0.08),
+          color: AppColors.white.withOpacity(0.08),
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
-            color: AppConfig.whiteColor.withOpacity(0),
+            color: AppColors.white.withOpacity(0),
             width: 1.0,
           ),
         ),
@@ -97,7 +97,7 @@ class HundredRunsContainer extends StatelessWidget {
                       text: "100",
                       style: TextStyle(
                         fontSize: 46,
-                        color: AppConfig.yellowColor,
+                        color: AppColors.yellow,
                         fontWeight: FontWeight.w700,
                         letterSpacing: -0.01,
                         fontFamily: "Inter",
@@ -117,7 +117,7 @@ class HundredRunsContainer extends StatelessWidget {
                         text: "Runs",
                         style: TextStyle(
                           fontSize: 16,
-                          color: AppConfig.whiteColor,
+                          color: AppColors.white,
                           fontWeight: FontWeight.w400,
                           letterSpacing: -0.01,
                           fontFamily: "Inter",
@@ -137,7 +137,7 @@ class HundredRunsContainer extends StatelessWidget {
                           text: "6,99 \$",
                           style: TextStyle(
                             fontSize: 26,
-                            color: AppConfig.yellowColor,
+                            color: AppColors.yellow,
                             fontWeight: FontWeight.w700,
                             letterSpacing: -0.01,
                             fontFamily: "Inter",
@@ -172,10 +172,10 @@ class FifyRunsContainer extends StatelessWidget {
             child: Container(
               height: 77,
               decoration: BoxDecoration(
-                color: AppConfig.whiteColor.withOpacity(0.08),
+                color: AppColors.white.withOpacity(0.08),
                 borderRadius: BorderRadius.circular(10.0),
                 border: Border.all(
-                  color: AppConfig.whiteColor.withOpacity(0),
+                  color: AppColors.white.withOpacity(0),
                   width: 1.0,
                 ),
               ),
@@ -193,7 +193,7 @@ class FifyRunsContainer extends StatelessWidget {
                             text: "50",
                             style: TextStyle(
                               fontSize: 46,
-                              color: AppConfig.yellowColor,
+                              color: AppColors.yellow,
                               fontWeight: FontWeight.w700,
                               letterSpacing: -0.01,
                               fontFamily: "Inter",
@@ -213,7 +213,7 @@ class FifyRunsContainer extends StatelessWidget {
                               text: "Runs",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: AppConfig.whiteColor,
+                                color: AppColors.white,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",
@@ -233,7 +233,7 @@ class FifyRunsContainer extends StatelessWidget {
                                 text: "3,99 \$",
                                 style: TextStyle(
                                   fontSize: 26,
-                                  color: AppConfig.yellowColor,
+                                  color: AppColors.yellow,
                                   fontWeight: FontWeight.w700,
                                   letterSpacing: -0.01,
                                   fontFamily: "Inter",
@@ -271,10 +271,10 @@ class TwentyFiveRunsContainer extends StatelessWidget {
             child: Container(
               height: 77,
               decoration: BoxDecoration(
-                color: AppConfig.whiteColor.withOpacity(0.08),
+                color: AppColors.white.withOpacity(0.08),
                 borderRadius: BorderRadius.circular(10.0),
                 border: Border.all(
-                  color: AppConfig.yellowColor.withOpacity(1),
+                  color: AppColors.yellow.withOpacity(1),
                   width: 1.0,
                 ),
               ),
@@ -292,7 +292,7 @@ class TwentyFiveRunsContainer extends StatelessWidget {
                             text: "25",
                             style: TextStyle(
                               fontSize: 46,
-                              color: AppConfig.yellowColor,
+                              color: AppColors.yellow,
                               fontWeight: FontWeight.w700,
                               letterSpacing: -0.01,
                               fontFamily: "Inter",
@@ -312,7 +312,7 @@ class TwentyFiveRunsContainer extends StatelessWidget {
                               text: "Runs",
                               style: TextStyle(
                                 fontSize: 16,
-                                color: AppConfig.whiteColor,
+                                color: AppColors.white,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",
@@ -332,7 +332,7 @@ class TwentyFiveRunsContainer extends StatelessWidget {
                                 text: "1,99 \$",
                                 style: TextStyle(
                                   fontSize: 26,
-                                  color: AppConfig.yellowColor,
+                                  color: AppColors.yellow,
                                   fontWeight: FontWeight.w700,
                                   letterSpacing: -0.01,
                                   fontFamily: "Inter",
@@ -369,7 +369,7 @@ class TwentyFiveRunsContainer extends StatelessWidget {
                         text: "Most popular",
                         style: TextStyle(
                           fontSize: 11,
-                          color: AppConfig.blackColor,
+                          color: AppColors.black,
                           fontWeight: FontWeight.w700,
                           letterSpacing: -0.01,
                           fontFamily: "Inter",
@@ -401,10 +401,10 @@ class TenRunsContainer extends StatelessWidget {
       child: Container(
         height: 77,
         decoration: BoxDecoration(
-          color: AppConfig.whiteColor.withOpacity(0.08),
+          color: AppColors.white.withOpacity(0.08),
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
-            color: AppConfig.whiteColor.withOpacity(0),
+            color: AppColors.white.withOpacity(0),
             width: 1.0,
           ),
         ),
@@ -421,7 +421,7 @@ class TenRunsContainer extends StatelessWidget {
                       text: "10",
                       style: TextStyle(
                         fontSize: 46,
-                        color: AppConfig.yellowColor,
+                        color: AppColors.yellow,
                         fontWeight: FontWeight.w700,
                         letterSpacing: -0.01,
                         fontFamily: "Inter",
@@ -441,7 +441,7 @@ class TenRunsContainer extends StatelessWidget {
                         text: "Runs",
                         style: TextStyle(
                           fontSize: 16,
-                          color: AppConfig.whiteColor,
+                          color: AppColors.white,
                           fontWeight: FontWeight.w400,
                           letterSpacing: -0.01,
                           fontFamily: "Inter",
@@ -461,7 +461,7 @@ class TenRunsContainer extends StatelessWidget {
                           text: "0,99 \$",
                           style: TextStyle(
                             fontSize: 26,
-                            color: AppConfig.yellowColor,
+                            color: AppColors.yellow,
                             fontWeight: FontWeight.w700,
                             letterSpacing: -0.01,
                             fontFamily: "Inter",
@@ -491,7 +491,7 @@ class Head extends StatelessWidget {
           text: "Get more runs",
           style: TextStyle(
             fontSize: 33,
-            color: AppConfig.whiteColor,
+            color: AppColors.white,
             fontWeight: FontWeight.w400,
             fontFamily: "Inter",
           ),
@@ -514,7 +514,7 @@ class RunOnBalanceContainer extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
-            color: AppConfig.whiteColor.withOpacity(0.2),
+            color: AppColors.white.withOpacity(0.2),
             width: 1.0,
           ),
         ),
@@ -530,7 +530,7 @@ class RunOnBalanceContainer extends StatelessWidget {
                       text: "4",
                       style: TextStyle(
                         fontSize: 24,
-                        color: AppConfig.yellowColor,
+                        color: AppColors.yellow,
                         fontWeight: FontWeight.w600,
                         letterSpacing: -0.01,
                         fontFamily: "Inter",
@@ -547,7 +547,7 @@ class RunOnBalanceContainer extends StatelessWidget {
                       text: "Runs on balance",
                       style: TextStyle(
                         fontSize: 16,
-                        color: AppConfig.whiteColor,
+                        color: AppColors.white,
                         fontWeight: FontWeight.w400,
                         letterSpacing: -0.01,
                         fontFamily: "Inter",
@@ -565,7 +565,7 @@ class RunOnBalanceContainer extends StatelessWidget {
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.info_outline),
-                      color: AppConfig.yellowColor,
+                      color: AppColors.yellow,
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -608,7 +608,7 @@ class CancelButton extends StatelessWidget {
                   text: "Cancel",
                   style: TextStyle(
                     fontSize: 17,
-                    color: AppConfig.whiteColor,
+                    color: AppColors.white,
                     fontWeight: FontWeight.w400,
                     letterSpacing: -0.01,
                     fontFamily: "Inter",
@@ -635,12 +635,12 @@ class WatchAdButton extends StatelessWidget {
       onTap: () {
         showModalWatchAd(context);
       },
-      startColor: AppConfig.purpleColor,
-      endColor: AppConfig.purpleColor,
+      startColor: AppColors.purple,
+      endColor: AppColors.purple,
       width: MediaQuery.of(context).size.width,
       height: 46,
-      borderColor: AppConfig.yellowColor,
-      textColor: AppConfig.yellowColor,
+      borderColor: AppColors.yellow,
+      textColor: AppColors.yellow,
     );
   }
 }
@@ -661,7 +661,7 @@ class PlaintTextAboveButton extends StatelessWidget {
                 text: "Watch ad to get mo runs",
                 style: TextStyle(
                   fontSize: 20,
-                  color: AppConfig.whiteColor,
+                  color: AppColors.white,
                   fontWeight: FontWeight.w400,
                   fontFamily: "Inter",
                   letterSpacing: -0.02,

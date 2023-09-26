@@ -3,7 +3,7 @@ import 'package:toxicity/config/config.dart';
 
 Future<dynamic> showModalPay(BuildContext context) {
   return showModalBottomSheet(
-    backgroundColor: AppConfig.whiteColor,
+    backgroundColor: AppColors.white,
     context: context,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
@@ -47,7 +47,7 @@ class IconCloseButton extends StatelessWidget {
         child: IconButton(
           icon: Image.asset(
             'assets/images/close.png',
-            color: AppConfig.purpleColor,
+            color: AppColors.purple,
             width: 30,
             height: 30,
           ),
@@ -82,7 +82,7 @@ class PlainTextInCenter extends StatelessWidget {
                   text: "Окно оплаты маркета",
                   style: TextStyle(
                     fontSize: 33,
-                    color: AppConfig.blackColor,
+                    color: AppColors.black,
                     fontWeight: FontWeight.w400,
                     fontFamily: "Inter",
                   ),

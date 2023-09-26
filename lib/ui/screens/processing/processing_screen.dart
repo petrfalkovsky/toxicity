@@ -36,7 +36,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.yellowColor,
+      backgroundColor: AppColors.yellow,
       body: Stack(
         children: [
           Positioned(
@@ -45,9 +45,9 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
               width: MediaQuery.of(context).size.width,
               height: 70,
               decoration: BoxDecoration(
-                color: AppConfig.yellowColor,
+                color: AppColors.yellow,
                 border: Border.all(
-                  color: AppConfig.blackColor.withOpacity(0.4),
+                  color: AppColors.black.withOpacity(0.4),
                   width: 1,
                 ),
               ),
@@ -58,7 +58,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
                       text: "Your google banner here",
                       style: TextStyle(
                         fontSize: 20,
-                        color: AppConfig.blackColor.withOpacity(0.5),
+                        color: AppColors.black.withOpacity(0.5),
                         fontWeight: FontWeight.w400,
                         letterSpacing: -0.01,
                         fontFamily: "Inter",
@@ -87,7 +87,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
                               text: "Antitoxic tip",
                               style: TextStyle(
                                 fontSize: 20,
-                                color: AppConfig.blackColor,
+                                color: AppColors.black,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: "Inter",
                                 height: 2.5,
@@ -114,7 +114,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
                                 text: "Don't hesitate to ask for help:\n",
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: AppConfig.blackColor,
+                                  color: AppColors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Inter",
                                   height: 1.25,
@@ -125,7 +125,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
                                     "Don't hesitate to ask for help if you feel you can't handle the situation yourself.\nSeek help from professionals or organizations that can help you confront bullying.",
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: AppConfig.blackColor,
+                                  color: AppColors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Inter",
                                   height: 1.25,
@@ -151,7 +151,7 @@ class _ProcessingScreenState extends State<ProcessingScreen> {
                               text: "Processing",
                               style: TextStyle(
                                 fontSize: 33,
-                                color: AppConfig.blackColor,
+                                color: AppColors.black,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",

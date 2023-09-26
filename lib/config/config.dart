@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AppConfig {
+class AppColors {
   ///Шрифт
   static const String fontFamilyInter = "Inter";
 
   ////*------------------Цвета-----------------------------*///
   ///Базовые
-  static const Color yellowColor = Color(0xffDCFF03);
-  static const Color purpleColor = Color(0xff521A71);
-  static const Color blackColor = Color(0xff100815);
-  static const Color whiteColor = Color(0xffFFFFFF);
+  static const Color yellow = Color(0xffDCFF03);
+  static const Color purple = Color(0xff521A71);
+  static const Color lightPurple = Color(0xffBAA3C6);
+  static const Color black = Color(0xff100815);
+  static const Color white = Color(0xffFFFFFF);
 }

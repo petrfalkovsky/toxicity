@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
 import 'package:toxicity/ui/screens/general/general.dart';
 import 'package:toxicity/ui/screens/launch_test/launch_test.dart';
-import 'package:toxicity/ui/screens/widgets/shared/frame_background.dart';
+import 'package:toxicity/ui/screens/widgets/shared/main_frame_background.dart';
 import 'package:toxicity/ui/screens/widgets/shared/primary_button.dart';
 
 enum ImageSource {
@@ -21,7 +21,7 @@ class _SelectScreenState extends State<SelectScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.yellowColor,
+      backgroundColor: AppColors.yellow,
       body: Padding(
         padding:
             const EdgeInsets.only(top: 65, bottom: 48, left: 24, right: 24),
@@ -68,7 +68,7 @@ class Head extends StatelessWidget {
               text: "Select",
               style: TextStyle(
                 fontSize: 33,
-                color: AppConfig.blackColor,
+                color: AppColors.black,
                 fontWeight: FontWeight.w400,
                 letterSpacing: -0.01,
                 fontFamily: "Inter",
@@ -82,7 +82,7 @@ class Head extends StatelessWidget {
               text: "the image source",
               style: TextStyle(
                 fontSize: 33,
-                color: AppConfig.blackColor,
+                color: AppColors.black,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 0,
                 fontFamily: "Inter",
@@ -124,7 +124,7 @@ class CancelButton extends StatelessWidget {
                   text: "Cancel",
                   style: TextStyle(
                     fontSize: 17,
-                    color: AppConfig.blackColor,
+                    color: AppColors.black,
                     fontWeight: FontWeight.w400,
                     letterSpacing: -0.01,
                     fontFamily: "Inter",
@@ -168,8 +168,8 @@ class _CameraAndGalleryButtonsState extends State<CameraAndGalleryButtons> {
                 ),
               );
             },
-            startColor: AppConfig.yellowColor,
-            endColor: AppConfig.yellowColor,
+            startColor: AppColors.yellow,
+            endColor: AppColors.yellow,
             width: MediaQuery.of(context).size.width * 0.43,
           ),
           PrimaryButton(
@@ -184,8 +184,8 @@ class _CameraAndGalleryButtonsState extends State<CameraAndGalleryButtons> {
                 ),
               );
             },
-            startColor: AppConfig.yellowColor,
-            endColor: AppConfig.yellowColor,
+            startColor: AppColors.yellow,
+            endColor: AppColors.yellow,
             width: MediaQuery.of(context).size.width * 0.43,
           ),
         ],
@@ -211,7 +211,7 @@ class PlaonTextAboveButtons extends StatelessWidget {
                     "For best results, the photo should clearly show one person's face.    If you can't see the person in the photo, or there are multiple people in the photo, the results may be poor.",
                 style: TextStyle(
                   fontSize: 16,
-                  color: AppConfig.whiteColor,
+                  color: AppColors.white,
                   fontWeight: FontWeight.w400,
                   fontFamily: "Inter",
                 ),

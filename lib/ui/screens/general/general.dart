@@ -4,7 +4,7 @@ import 'package:toxicity/ui/screens/select/select.dart';
 import 'package:toxicity/ui/screens/get_runs/modal_get_runs.dart';
 import 'package:toxicity/ui/screens/widgets/shared/primary_button.dart';
 import 'package:toxicity/ui/screens/general/modal_about.dart';
-import '../widgets/shared/frame_background.dart';
+import '../widgets/shared/main_frame_background.dart';
 
 class General extends StatefulWidget {
   const General({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _GeneralState extends State<General> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.yellowColor,
+      backgroundColor: AppColors.yellow,
       body: Padding(
         padding:
             const EdgeInsets.only(top: 65, bottom: 48, left: 24, right: 24),
@@ -69,7 +69,7 @@ class Head extends StatelessWidget {
           text: "toxicity test!",
           style: TextStyle(
             fontSize: 48,
-            color: AppConfig.blackColor,
+            color: AppColors.black,
             fontWeight: FontWeight.w600,
             letterSpacing: -0.01,
             fontFamily: "Inter",
@@ -93,7 +93,7 @@ class ItsTimePlainText extends StatelessWidget {
           text: "It's time to run",
           style: TextStyle(
             fontSize: 32,
-            color: AppConfig.blackColor,
+            color: AppColors.black,
             fontWeight: FontWeight.w300,
             letterSpacing: 0.01,
             fontFamily: "Inter",
@@ -122,7 +122,7 @@ class InfoIconButton extends StatelessWidget {
           child: IconButton(
             icon: Image.asset(
               'assets/images/info-icon.png',
-              color: AppConfig.purpleColor,
+              color: AppColors.purple,
             ),
             onPressed: () {
               // TODO: удалить, создано для тестирования, по этой кнопке нет сценария
@@ -153,8 +153,8 @@ class RunTestButton extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const SelectScreen()),
         );
       },
-      startColor: AppConfig.yellowColor,
-      endColor: AppConfig.yellowColor,
+      startColor: AppColors.yellow,
+      endColor: AppColors.yellow,
     );
   }
 }
@@ -176,7 +176,7 @@ class GetMoreRunsButton extends StatelessWidget {
             text: "get more runs",
             style: TextStyle(
               fontSize: 20,
-              color: AppConfig.yellowColor,
+              color: AppColors.yellow,
               fontWeight: FontWeight.w600,
               letterSpacing: -0.02,
               fontFamily: "Inter",
@@ -201,7 +201,7 @@ class PlainTextTestRunsLeft extends StatelessWidget {
           text: "Test runs left:  ",
           style: TextStyle(
             fontSize: 20,
-            color: AppConfig.whiteColor,
+            color: AppColors.white,
             fontWeight: FontWeight.w400,
             letterSpacing: -0.02,
             fontFamily: "Inter",
@@ -211,7 +211,7 @@ class PlainTextTestRunsLeft extends StatelessWidget {
           text: "4",
           style: TextStyle(
             fontSize: 20,
-            color: AppConfig.yellowColor,
+            color: AppColors.yellow,
             fontWeight: FontWeight.w600,
             letterSpacing: -0.02,
             fontFamily: "Inter",

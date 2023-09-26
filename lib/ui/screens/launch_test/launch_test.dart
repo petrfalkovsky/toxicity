@@ -8,7 +8,7 @@ import 'package:toxicity/config/config.dart';
 import 'package:toxicity/ui/screens/processing/animated_progress.dart';
 import 'package:toxicity/ui/screens/processing/processing_screen.dart';
 import 'package:toxicity/ui/screens/select/select.dart' as select;
-import 'package:toxicity/ui/screens/widgets/shared/frame_background.dart';
+import 'package:toxicity/ui/screens/widgets/shared/main_frame_background.dart';
 import 'package:toxicity/ui/screens/widgets/shared/primary_button.dart';
 
 class LaunchTestScreen extends StatefulWidget {
@@ -45,7 +45,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppConfig.yellowColor,
+      backgroundColor: AppColors.yellow,
       body: Stack(
         children: [
           Positioned(
@@ -65,7 +65,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                               text: "Waiting for your device\n",
                               style: TextStyle(
                                 fontSize: 24,
-                                color: AppConfig.blackColor,
+                                color: AppColors.black,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",
@@ -75,7 +75,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                               text: "to figure out",
                               style: TextStyle(
                                 fontSize: 24,
-                                color: AppConfig.blackColor,
+                                color: AppColors.black,
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: -0.01,
                                 fontFamily: "Inter",
@@ -85,7 +85,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                         ),
                         const SizedBox(height: 20),
                         const RotatingProgressBar(
-                          color: AppConfig.purpleColor,
+                          color: AppColors.purple,
                         )
                       ],
                     )
@@ -123,8 +123,8 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                           );
                         }
                       },
-                      startColor: AppConfig.yellowColor,
-                      endColor: AppConfig.yellowColor,
+                      startColor: AppColors.yellow,
+                      endColor: AppColors.yellow,
                     )
                   ],
                 ),
@@ -148,7 +148,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                                   text: "Cancel",
                                   style: TextStyle(
                                     fontSize: 17,
-                                    color: AppConfig.blackColor,
+                                    color: AppColors.black,
                                     fontWeight: FontWeight.w400,
                                     letterSpacing: -0.01,
                                     fontFamily: "Inter",
@@ -172,7 +172,7 @@ class _LaunchTestScreenState extends State<LaunchTestScreen> {
                                   text: "Change",
                                   style: TextStyle(
                                     fontSize: 17,
-                                    color: AppConfig.blackColor,
+                                    color: AppColors.black,
                                     fontWeight: FontWeight.w400,
                                     letterSpacing: -0.01,
                                     fontFamily: "Inter",

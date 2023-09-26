@@ -48,7 +48,7 @@ class FrameMainScreen extends CustomPainter {
     canvas.scale(1, height);
 
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
-    paint0Fill.color = AppConfig.purpleColor.withOpacity(1.0);
+    paint0Fill.color = AppColors.purple.withOpacity(1.0);
 
     canvas.drawPath(path_0, paint0Fill);
   }

@@ -12,7 +12,7 @@ class _WatchAdScreenState extends State<WatchAdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppConfig.purpleColor,
+        backgroundColor: AppColors.purple,
         body: Padding(
           padding:
               const EdgeInsets.only(top: 65, bottom: 48, left: 24, right: 24),
@@ -43,7 +43,7 @@ class PlainTextInCenter extends StatelessWidget {
               text: "Сценарий просмотра роликов с AdMob",
               style: TextStyle(
                 fontSize: 33,
-                color: AppConfig.whiteColor,
+                color: AppColors.white,
                 fontWeight: FontWeight.w400,
                 fontFamily: "Inter",
               ),
@@ -75,7 +75,7 @@ class IconCloseButton extends StatelessWidget {
           child: IconButton(
             icon: const Icon(
               Icons.close,
-              color: AppConfig.whiteColor,
+              color: AppColors.white,
             ),
             onPressed: () {
               Navigator.pop(context);
