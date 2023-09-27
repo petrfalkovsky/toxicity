@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toxicity/config/config.dart';
+import 'package:toxicity/ui/screens/general/modal_settings.dart';
 import 'package:toxicity/ui/screens/select/select.dart';
 import 'package:toxicity/ui/screens/get_runs/modal_get_runs.dart';
 import 'package:toxicity/ui/screens/widgets/shared/primary_button.dart';
@@ -42,7 +43,13 @@ class _GeneralState extends State<General> {
             Column(
               children: [
                 const SizedBox(height: 30),
-                const InfoIconButton(),
+                Row(
+                  children: const [
+                    InfoIconButton(),
+                    Spacer(),
+                    SettingsIconButton(),
+                  ],
+                ),
                 const SizedBox(height: 60),
                 Column(
                   children: const [ItsTimePlainText(), Head()],
@@ -112,7 +119,6 @@ class InfoIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Ink(
           decoration: const ShapeDecoration(
@@ -121,12 +127,44 @@ class InfoIconButton extends StatelessWidget {
           ),
           child: IconButton(
             icon: Image.asset(
-              'assets/images/info-icon.png',
+              'assets/images/info_icon.png',
               color: AppColors.purple,
             ),
             onPressed: () {
               // TODO: удалить, создано для тестирования, по этой кнопке нет сценария
               showModalAbout(context);
+            },
+            iconSize: 45,
+            padding: EdgeInsets.zero,
+            splashRadius: 80,
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class SettingsIconButton extends StatelessWidget {
+  const SettingsIconButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Ink(
+          decoration: const ShapeDecoration(
+            color: Colors.transparent,
+            shape: CircleBorder(),
+          ),
+          child: IconButton(
+            icon: Image.asset(
+              'assets/images/settings_icon.png',
+              color: AppColors.purple,
+            ),
+            onPressed: () {
+              showModalSettings(context);
             },
             iconSize: 45,
             padding: EdgeInsets.zero,
@@ -255,6 +293,17 @@ Future<dynamic> showModalGetRuns(BuildContext context) {
     isScrollControlled: true,
     builder: (context) {
       return const GetRunsScreen();
+    },
+  );
+}
+
+Future<dynamic> showModalSettings(BuildContext context) {
+  return showModalBottomSheet(
+    backgroundColor: Colors.transparent,
+    context: context,
+    isScrollControlled: true,
+    builder: (context) {
+      return const SettingsScreen();
     },
   );
 }
